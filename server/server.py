@@ -9,6 +9,8 @@ from peewee import *
 from flask import Flask, render_template, request
 from flask_cors import CORS
 from stravalib.client import Client
+from dotenv import load_dotenv, find_dotenv
+load_dotenv(find_dotenv())
 
 client = Client()
 
@@ -18,6 +20,7 @@ CORS(app)
 
 STRAVA_API_KEY = os.getenv("STRAVA_API_KEY")
 BING_API_KEY = os.getenv("BING_API_KEY")
+print(STRAVA_API_KEY)
 
 BEST_SEGMENTS = [1535164, 1658714, 15765875, 2474266, 2019489, 8199567]
 
