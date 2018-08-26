@@ -8,7 +8,3 @@ const Trails = {
 };
 
 module.exports = Trails
-
-
-
-
